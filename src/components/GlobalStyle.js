@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
 
 body {
     background: #1b1b1b;
+    font-family: 'Inter', sans-serif;
 }
 
 button {
@@ -37,6 +38,7 @@ button {
     
     h4 {
         font-weight: bold;
+        font-size: 2rem;
     }
     
     span {
@@ -49,7 +51,7 @@ button {
     }
     
     p {
-        padding: 3rem 0rem;
+        padding: 3rem 0;
         color: #ccc;
         font-size: 1.4rem;
         line-height: 150%;

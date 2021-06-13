@@ -6,57 +6,86 @@ import money from '../img/money.svg'
 import teamwork from '../img/teamwork.svg';
 // Import Images
 import home2 from '../img/home2.png';
+// Styles
+import {About, Description, Hide, Image} from "../styles";
+import styled from "styled-components";
 
 const ServicesSection = () => {
     return (
-        <div className="services">
-            <div className="description">
+        <Services>
+            <Description>
                 <h2>High <span>quality</span> services</h2>
-                <div className="cards">
-                    <div className="card">
+                <Cards>
+                    <Card>
                         <div className="icon">
                             <img src={clock} alt='Clock'/>
                             <h3>Efficient</h3>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium atque
-                            dignissimos eaque harum id incidunt ipsum maiores minima natus perspiciatis placeat,
-                            possimus praesentium provident, quia quibusdam rerum tempore totam.</p>
-                    </div>
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </Card>
 
-                    <div className="card">
+                    <Card>
                         <div className="icon">
                             <img src={teamwork} alt='Teamwork'/>
                             <h3>Teamwork</h3>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium atque
-                            dignissimos eaque harum id incidunt ipsum maiores minima natus perspiciatis placeat,
-                            possimus praesentium provident, quia quibusdam rerum tempore totam.</p>
-                    </div>
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </Card>
 
-                    <div className="card">
+                    <Card>
                         <div className="icon">
                             <img src={diaphragm} alt='Diaphragm'/>
                             <h3>Diaphragm</h3>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium atque
-                            dignissimos eaque harum id incidunt ipsum maiores minima natus perspiciatis placeat,
-                            possimus praesentium provident, quia quibusdam rerum tempore totam.</p>
-                    </div>
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </Card>
 
-                    <div className="card">
+                    <Card>
                         <div className="icon">
                             <img src={money} alt='Money'/>
                             <h3>Affordable</h3>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium atque
-                            dignissimos eaque harum id incidunt ipsum maiores minima natus perspiciatis placeat,
-                            possimus praesentium provident, quia quibusdam rerum tempore totam.</p>
-                    </div>
-                    <img src={home2} alt='Camera'/>
-                </div>
-            </div>
-        </div>
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </Card>
+                </Cards>
+            </Description>
+
+            <Image>
+                <img src={home2} alt='Camera'/>
+            </Image>
+
+        </Services>
     );
 };
+
+const Services = styled(About)`
+h2 {
+    padding-bottom: 5rem;
+}
+
+p {
+    width: 70%;
+    padding: 2rem 0 4rem 0;
+}
+`;
+
+const Cards = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+`;
+
+const Card = styled.div`
+    flex-basis: 20rem;
+    .icon{
+        display: flex;
+        align-items: center;
+        h3{
+            margin-left: 1rem;
+            background-color: white;
+            color: black;
+            padding: 1rem;
+        }
+    }
+`;
 
 export default ServicesSection;
