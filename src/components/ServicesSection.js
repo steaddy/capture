@@ -9,10 +9,19 @@ import home2 from '../img/home2.png';
 // Styles
 import {About, Description, Hide, Image} from "../styles";
 import styled from "styled-components";
+import { useScroll } from "./useScroll";
+import { fade } from '../animation';
 
 const ServicesSection = () => {
+    const [element, controls] = useScroll();
+
     return (
-        <Services>
+        <Services
+            variants={fade}
+            ref={element}
+            animate={controls}
+            initial="hidden"
+        >
             <Description>
                 <h2>High <span>quality</span> services</h2>
                 <Cards>
