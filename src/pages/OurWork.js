@@ -10,6 +10,8 @@ import { motion } from 'framer-motion';
 import { pageAnimation, fade, photoAnim, lineAnim, slider, sliderContainer } from "../animation";
 import { useScroll } from "../components/useScroll";
 
+import ScrollTop from "../components/ScrollTop";
+
 const OurWork = () => {
     const [element, controls] = useScroll();
     const [element2, controls2] = useScroll();
@@ -21,6 +23,7 @@ const OurWork = () => {
               exit="exit"
               style={{background: "#fff"}}
         >
+            <ScrollTop/>
             <motion.div
             variants={sliderContainer}
             >
@@ -78,6 +81,9 @@ const Work = styled(motion.div)`
     padding: 5rem 10rem;
     h2 {
         padding: 1rem 0;
+    }
+    @media (max-width: 1300px) {
+        padding: 2rem;
     }
 `;
 
